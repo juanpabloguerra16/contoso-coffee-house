@@ -198,6 +198,7 @@ $content = Get-Content .\Deployment\azurekeyvault.yaml
 $content = $content.Replace('$MANAGEDID', $AKSMSIId)
 $content = $content.Replace('$KEYVAULTNAME', $KeyVaultName)
 
+
 $TenantId = az account show --query "tenantId" -o tsv
 
 $content = $content.Replace('$TENANTID', $TenantId)
