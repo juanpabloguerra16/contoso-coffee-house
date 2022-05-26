@@ -9,7 +9,7 @@ CCH started a Loyalty Program about 10 years ago where every $1 purchase would e
 
 * Customers sign up for free.
 * Customers can exchange for items in Store with help from Barista which means manual work via a Customer Service webapp to lookup member and select the exchange item. The Customer service web app is already using Azure Active Directory for signing in employees. For some items, a Partner will be handling the order and ship item to the member. Partner will manage the inventory so if an item is not available, the system will notify immediately.
-* Customer can order in store today and get points awarded within 7 days. This is because the full Transaction Log from each store is pushed in weekly usually on the weekend and a backend system would award points so it can be used.
+* Customer can order in store today and get points awarded within 7 days. This is because the full Transaction Log from each store is pushed in weekly usually on the weekend and a on-premise backend system with limitations in capacity would award points so it can be used.
 * The solutions needs to be avaliable for over 1000 stores located in North America (US and Canada).
 * The solutions needs to be avaliable during store operation hours which is between 5 AM to 11:00 PM CST.
 
@@ -19,7 +19,7 @@ CCH started a Loyalty Program about 10 years ago where every $1 purchase would e
 * Customers can also make an order from website, although this is less than 1%.
 
 ### New Business Requirements
-* Contoso Coffee House would like to consider real-time award of points to increase member satisfaction with the program and perhaps additional purchases because of potential to get more points. One thought is that the Point-Of-Sale could forward transaction.
+* Contoso Coffee House would like to consider real-time award of points to increase member satisfaction with the program and perhaps additional purchases because of potential to get more points. One thought is that the Point-Of-Sale could forward transaction. If there's an issue with internet connectivity in the store or a region, there needs to be a catch up process that can scale to meet any processing demands.
 * Would like to at some point collobrate with other organizations with similar loyalty program so points can be award from them either real-time or maybe based on schedule from their transaction logs. For example, if the customer buys a particular item from a vendor with a specific SKU, there could be double points awarded.
 * Security MUST be a priority and we should design with zero trust in mind.
 
